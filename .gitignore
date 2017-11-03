@@ -1,0 +1,13 @@
+*.pyc
+bin/
+*.Python
+.idea/
+include/
+lib/
+local/
+man/
+.DS_Store
+*.egg-info
+dist/
+*.db
+*.sqlite3
