@@ -5,21 +5,8 @@
 {% endblock title %}
 
 {% block content %}
-    <h1>Hello World!</h1>
-    <p>{{ number }}</p>
-    <p>{% if number %}Number exists!{% endif %}</p>
-    <p>There are six dogs! <b>
-      {% if number == 6 %}
-          True
-      {% else %}
-          False
-      {% endif %}
-    </b></p>
-    <p>There are {{ number }} dog{{ number|pluralize }}!</p>
-    <p>There are {{ number }} walrus{{ number|pluralize:"es" }}!</p>
-    <p>There are {{ number|apnumber }} dogs!</p>
-
-    <p>This is my name: {{ thing|slugify }}</p>
-    <p>This is my name: {{ thing|title }}</p>
-    <p>This is my name: {{ thing|truncatewords:1 }}</p>
+  {% for thing in things %}
+  <h2>{{ thing.name }}</h2>
+  <p>{{ thing.description }}</p>
+  {% endfor %}
 {% endblock content %}

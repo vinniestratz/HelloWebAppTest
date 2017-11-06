@@ -1,17 +1,15 @@
 from django.shortcuts import render
+from collection.models import Thing
 
 
 # Create your views here.
 def index(request):
-    # defining the variable
-    number = 6
-    # quotes for strings... obviously
-    thing = "Thing name"
-    # passing the variable to the view
+    things = Thing.objects.all()
+    # correct_thing = Thing.objects.get(name='Hello')
+    # things = Thing.objects.filter(name='Hello')
     return render(request, 'index.html', {
-        'number': number,
-        'thing': thing,
-    })
+        'things': things,
+        })
 
 
 def about(request):

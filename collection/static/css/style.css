@@ -3,3 +3,7 @@ body {
   color: #fff;
   font-family: sans-serif;
 }
+
+ul li a {
+  color: #fff;
+}
