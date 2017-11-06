@@ -26,5 +26,7 @@ urlpatterns = [
         name='contact'),
     url(r'^things/(?P<slug>[-\w]+)/$', views.thing_detail,
         name='thing_detail'),
+    url(r'^things/(?P<slug>[-\w]+)/edit/$',
+        views.edit_thing, name='edit_thing'),
     url(r'^admin/', admin.site.urls),
 ]
