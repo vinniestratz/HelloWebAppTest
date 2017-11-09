@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block title %}
+    Success - {{ block.super}}
+{% endblock title %}
+
+{% block content %}
+<h1>Success! Email sent.</h1>
+<a href="{% url 'contact' %}">Go Back</a>
+{% endblock content %}

@@ -15,9 +15,8 @@ from django.contrib.auth.views import (
 urlpatterns = [
     url(r'^$', views.index, name='home'),
     url(r'^about-us/$', views.about, name='about'),
-    url(r'^contact/$',
-        TemplateView.as_view(template_name='contact.html'),
-        name='contact'),
+    url(r'^contact/$', views.contact, name='contact'),
+    url(r'^success/$', views.success, name='success'),
     # redirect view things
     url(r'^things/$', RedirectView.as_view(pattern_name='browse', permanent=True)),
     url(r'^things/(?P<slug>[-\w]+)/$', views.thing_detail,

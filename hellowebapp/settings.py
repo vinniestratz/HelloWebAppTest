@@ -25,7 +25,7 @@ SECRET_KEY = 'v5gqwrzl%4c)g0(1z*g2hme51fl@p++f759_bfhejw(r8^@cey'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -123,10 +123,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 ACCOUNT_ACTIVATION_DAYS = 7
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'testing@example.com'
 EMAIL_HOST_USER = ''
 EMAIL_HOST_PASSWORD = ''
 EMAIL_USE_TLS = False
 EMAIL_PORT = 1025
+
 LOGIN_REDIRECT_URL = "home"
